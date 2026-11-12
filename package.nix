@@ -25,7 +25,8 @@ buildNpmPackage (finalAttrs: {
   };
 
   postPatch = ''
-    sed -i '65i setDesktopName("vieb"); /"electron"/d' package.json
+    sed -i '65i setDesktopName("vieb")' app/index.js
+    sed -i '/"electron"/d' package.json
   '';
 
   npmDepsHash = "sha256-upZRwrqnaGxdeEpi1QGK0aQ4qiyrHWjTTHYgyqU1rmg=";
