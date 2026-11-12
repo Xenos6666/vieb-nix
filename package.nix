@@ -25,7 +25,7 @@ buildNpmPackage (finalAttrs: {
   };
 
   postPatch = ''
-    sed -i '65i setDesktopName("vieb")' app/index.js
+    sed -i '65i app.setDesktopName("vieb")' app/index.js
     sed -i '/"electron"/d' package.json
   '';
 
